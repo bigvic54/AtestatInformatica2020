@@ -1,0 +1,158 @@
+body
+{
+    /*background-color: #d1e0e8;*/
+    background-color: #f2fcff;
+}
+
+.box-mic
+{
+    position: absolute;
+	border: 1px solid #337cf2;
+	border-radius: 6px;	
+	box-shadow: 0px 0px 5px #193a78;
+	z-index: 0;
+	padding: 10px;
+	width: 120px;
+	height: 500px;
+	top: 25%;
+    left: 40%;
+	margin-left: -350px;
+	margin-top: -150px;
+}
+
+.box-mare
+{
+	position: absolute;
+	border: 1px solid #337cf2;
+	border-radius: 6px;	
+	box-shadow: 0px 0px 5px #193a78;
+	z-index: 0;
+	padding: 10px;
+	width: 850px;
+	height: 500px;
+	top: 25%;
+	left: 49%;
+	margin-left: -350px;
+	margin-top: -150px;
+	margin-bottom: 50px;
+}
+
+.title-mic
+{
+	position: absolute;
+	z-index: 1;
+	border: 1px solid #1d4da1;
+	border-radius: 6px;	
+	width: 140px;
+	height: 30px;
+	margin-left: -11px;
+    margin-top: -10px;
+    background: #1d4da1;
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: white;
+}   
+
+.title-mare
+{
+	position: absolute;
+	z-index: 1;
+	border-bottom: 1px solid #cccccc;
+	width: 870px;
+	height: 75px;
+	margin-left: -10px;
+	margin-top: -20px;
+	text-align: center;
+	font-weight: 300;
+	font-size: 25px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	color: #1d4da1;
+}
+
+.optiune
+{
+    position: relative;
+    width: 120px;
+    height: 30px;
+    margin-top: 40px;
+    margin-left: -25px;
+    color: #1d4da1;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: left;
+    font-size: 16px;
+}
+
+.optiune-home
+{
+    position: relative;
+    width: 120px;
+    height: 50px;
+    margin-top: 40px;
+    margin-left: 15px;
+    color: #1d4da1;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: left;
+    font-size: 16px;
+}
+
+a.optiune-link:link
+{
+    color: #1d4da1;
+    text-decoration: none;
+}
+
+a.optiune-link:visited
+{
+    color: #1d4da1;
+    text-decoration: none;
+}
+
+a.optiune-link:hover
+{
+    color: #1d4da1;
+    text-decoration: underline;
+}
+
+a.optiune-link:active
+{
+    color: #1d4da1;
+    text-decoration: none;
+}
+
+.img-centru
+{
+    position: absolute;
+    top: 18%;
+    left: 25%;
+}
+
+.info
+{
+    position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+    margin-top: 100px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.prev
+{
+	position: relative;
+	margin-top: 100px;
+	margin-left: 0px;
+}
+
+.next
+{
+	position: relative;
+	margin-top: 100px;
+	margin-left: 700px;
+}
+
+.highlight
+{
+	color: #9400D3;
+}
