@@ -1,0 +1,123 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/style_home.css">
+    <title>Grafuri Orientate</title>
+
+</head>
+
+<body>
+
+    <div class="box-mic">
+
+        <h4 class="title-mic">Cuprins:</h4>
+
+        <p class="optiune-home">
+            <a class="optiune-link" href="home.html">Pagina Principală</a>
+        </p>
+
+        <ol>
+
+            <li class="optiune">
+                <a class="optiune-link" href="1introd.html">Introducere</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="2gn.html">Grafuri Neorientate</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="3go.html">Grafuri Orientate</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="4arb.html">Arbori</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="quiz.html">Test Recapitulativ</a>
+            </li>
+
+        </ol>
+
+    </div>
+
+    <div class="box-mare" style="height: 2500px; max-height: 2500px;">
+
+        <div class="title-mare">
+            <h3>GRAFURI ORIENTATE</h3>
+        </div>
+
+        <p class="info">
+
+            &emsp;<strong>Definiție:</strong> Se numeşte <strong class="highlight">graf orientat</strong> sau <strong class="highlight">digraf</strong> o pereche ordonată de mulțimi notată <strong class="highlight">G = (V, U)</strong>, unde:
+
+           <br><br>&emsp;- <strong class="highlight">V</strong> este o mulțime finită şi nevidă ale cărei elemente se numesc  <strong class="highlight">noduri</strong> sau  <strong class="highlight">vârfuri</strong>.
+           <br><br>&emsp;- <strong class="highlight">U</strong> este o mulțime de perechi ordonate de elemente distincte din  <strong class="highlight">V</strong> ale cărei elemente se numesc <strong class="highlight">arce</strong>.
+           
+           <br><br>&emsp;<strong>Exemplu:</strong>
+           
+           <br><br><img src="img/graf5.png" style="position: relative; left: 35%;">
+           
+           <br><br><br>&emsp;<strong class="highlight">V = {1, 2, 3, 4, 5, 6}</strong>
+           <br><br>&emsp;<strong class="highlight">U = {(1, 6), (2, 1), (2, 4), (3, 2), (4, 2), (5, 4), (6, 1), (6, 4)}</strong>
+           
+           <br><br>&emsp;Se observă că arcele <strong class="highlight">(1, 6)</strong> și <strong class="highlight">(6, 1)</strong> sunt distincte.
+
+           <br><br><br><br>&emsp;<strong>Observații: </strong>
+           <br><br>&emsp;a) <strong class="highlight">extremități</strong> ale unui arc: pentru arcul <strong class="highlight">u = (x, y)</strong>, se numesc <strong class="highlight">extremități</strong> ale sale nodurile <strong class="highlight">x</strong> şi <strong class="highlight">y</strong>;
+           <br><br>&emsp;&emsp;- <strong class="highlight">x</strong> se numeşte <strong class="highlight">extremitate inițială</strong>;
+           <br><br>&emsp;&emsp;- <strong class="highlight">y</strong> se numeşte <strong class="highlight">extremitate finală</strong>;
+           <br><br>&emsp;&emsp;- <strong class="highlight">y</strong> se numește <strong class="highlight">succesor</strong> al lui <strong class="highlight">x</strong>;
+           <br><br>&emsp;&emsp;- <strong class="highlight">x</strong> se numește <strong class="highlight">predecesor</strong> al lui <strong class="highlight">y</strong>.
+           <br><br>&emsp;b) <strong class="highlight">vârfuri adiacente</strong>: dacă într-un graf există arcul <strong class="highlight">u = (x, y)</strong> (sau <strong class="highlight">u = (y, x)</strong>, sau amândouă), se spune despre nodurile <strong class="highlight">x</strong> şi <strong class="highlight">y</strong> că sunt <strong class="highlight">adiacente</strong>;
+           <br><br>&emsp;c) <strong class="highlight">incidență</strong>:
+           <br><br>&emsp;&emsp;- dacă <strong class="highlight">u1</strong> şi <strong class="highlight">u2</strong> sunt două arce ale aceluiaşi graf, se numesc <strong class="highlight">incidente</strong> dacă au o extremitate comună.
+           <br><br>&emsp;&emsp;- dacă <strong class="highlight">u1 = (x, y)</strong> este un arc într-un graf, se spune despre el şi nodul <strong class="highlight">x</strong>, sau nodul <strong class="highlight">y</strong>, că sunt <strong class="highlight">incidente</strong>.
+
+           <br><br><br><br>&emsp;<strong>Definiție:</strong> Fie <strong class="highlight">G = (V, U)</strong> un graf orientat și <strong class="highlight">x</strong> un nod al său.
+
+           <br><br>&emsp;Se numeşte <strong class="highlight">grad exterior</strong> al nodului <strong class="highlight">x</strong>, numărul arcelor de forma <strong class="highlight">(x, y)</strong> (adică numărul arcelor care ies din <strong class="highlight">x</strong>), notat <strong class="highlight">d<sup>+</sup>(x).</strong>
+           <br><br>&emsp;Se numeşte <strong class="highlight">grad interior</strong> al nodului <strong class="highlight">x</strong>, numărul arcelor de forma <strong class="highlight">(y, x)</strong> (adică numărul arcelor care intră în <strong class="highlight">x</strong>), notat <strong class="highlight">d<sup>-</sup>(x).</strong>
+            
+           <br><br><br><br>&emsp;<strong>Definiție:</strong> Fie <strong class="highlight">G=(V, U)</strong> un graf orientat. Se numește <strong class="highlight">drum</strong> în graful <strong class="highlight">G</strong> o succesiune de noduri, notată
+           <strong class="highlight">D = (x1, x2, ..., xk)</strong>, cu proprietatea că pentru orice <strong class="highlight">1 ≤ i ≤ k-1</strong>, <strong class="highlight">(x<sub>i</sub>, x<sub>i+1</sub>)</strong> este arc în <strong class="highlight">G</strong>.
+
+            <br><br>&emsp;<strong class="highlight">Lungimea</strong> unui <strong class="highlight">drum</strong> este egală cu numărul de arce din care este alcătuit.
+
+            <br><br>&emsp;Pentru un drum <strong class="highlight">D = (x<sub>1</sub>, x<sub>2</sub>, ..., x<sub>k</sub>)</strong>, nodurile <strong class="highlight">x<sub>1</sub></strong> și <strong class="highlight">x<sub>k</sub></strong> reprezintă <strong class="highlight">extremitățile</strong> – inițială, respectiv finală.
+
+            <br><br>&emsp;Un <strong class="highlight">drum</strong> se numește <strong class="highlight">elementar</strong> dacă în el nu se repetă noduri. Un drum se numește <strong class="highlight">simplu</strong> dacă în el nu se repetă arce.
+
+            <br><br><br><br>&emsp;<strong>Definiție:</strong> Se numește <strong class="highlight">circuit</strong> un drum simplu în care extremitatea inițială și finală sunt egale. Se numește <strong class="highlight">circuit elementar </strong>un circuit în care, cu excepția extremităților, nu se repetă noduri.
+
+            <br><br>&emsp;<strong class="highlight">Lungimea</strong> unui <strong class="highlight">circuit</strong> este reprezentată de numărul de arce din care acesta este alcătuit.
+            
+            <br><br><br><br>&emsp;<strong>Definiții:</strong> Fie <strong class="highlight">G=(V, U)</strong> un graf orientat.
+
+            <br><br>&emsp;Graful se numește <strong class="highlight">conex</strong> dacă între oricare două noduri distincte există cel puțin un lanț.
+            
+            <br><br>&emsp;Se numește <strong class="highlight">componentă conexă </strong>un <strong class="highlight">subgraf conex</strong> și maximal cu această calitate – dacă am mai adăuga un nod, n-ar mai fi conex.
+            
+            <br><br>&emsp;Graful se numește <strong class="highlight">tare conex</strong> dacă între oricare două noduri distincte există cel puțin un drum.
+            
+            <br><br>&emsp;Se numește <strong class="highlight">componentă tare conexă</strong> un <strong class="highlight">subgraf tare conex</strong> și maximal cu această calitate – dacă am mai adăuga un nod, n-ar mai fi tare conex.
+
+            <br><br><img src="img/graf5.png" style="position: relative; left: 35%;">
+
+            <br><br><br><br>&emsp;<strong class="highlight">D = (3, 2, 1, 6, 4)</strong> este <strong class="highlight">drum elementar</strong>.
+            <br><br>&emsp;<strong class="highlight">D = (3, 2, 1, 6, 2, 4)</strong> este <strong class="highlight">drum neelementar</strong>.
+            <br><br>&emsp;<strong class="highlight">(1, 6, 2, 1)</strong> și <strong class="highlight">(1, 6, 4, 2, 1)</strong> sunt <strong class="highlight">circuite elementare</strong>.
+            <br><br>&emsp;<strong class="highlight">(1, 6)</strong> și <strong class="highlight">(2, 4)</strong> sunt <strong class="highlight">componente tare conexe</strong>.
+
+
+        </p>
+
+     </div>
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<html>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/style_home.css">
+    <title>Grafuri Neorientate</title>
+
+</head>
+
+<body>
+
+    <div class="box-mic">
+
+        <h4 class="title-mic">Cuprins:</h4>
+
+        <p class="optiune-home">
+            <a class="optiune-link" href="home.html">Pagina Principală</a>
+        </p>
+
+        <ol>
+
+            <li class="optiune">
+                <a class="optiune-link" href="1introd.html">Introducere</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="2gn.html">Grafuri Neorientate</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="3go.html">Grafuri Orientate</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="4arb.html">Arbori</a>
+            </li>
+
+            <li class="optiune">
+                <a class="optiune-link" href="quiz.html">Test Recapitulativ</a>
+            </li>
+
+        </ol>
+
+    </div>
+
+    <div class="box-mare" style="height: 4600px; max-height: 4600px;">
+
+        <div class="title-mare">
+            <h3>GRAFURI NEORIENTATE</h3>
+        </div>
+
+        <p class="info">
+            &emsp;<strong>Definiție: </strong> Se numește graf neorientat o pereche ordonată de mulțimi <strong class="highlight">G = (X, U)</strong>, unde:
+
+            <br><br>&emsp;- <strong class="highlight">X</strong> este o mulțime finită și nevidă de elemente numite <strong class="highlight">vârfuri</strong> sau <strong class="highlight">noduri</strong>;
+            <br><br>&emsp;- <strong class="highlight">U</strong> este o mulțime finită de submulțimi cu două elemente din <strong class="highlight">X</strong>, numite <strong class="highlight">muchii</strong>.
+            <br><br>&emsp;Vom nota în continuare vârfurile cu valori între <strong class="highlight">1</strong> și <strong class="highlight">n</strong> – unde <strong class="highlight">n</strong> este numărul de vârfuri din graf, iar muchiile cu <strong class="highlight">[x,y]</strong> sau <strong class="highlight">(x, y)</strong>, unde <strong class="highlight">x</strong> și <strong class="highlight">y</strong> sunt vârfuri și se numesc <strong class="highlight">extremitățile muchiei</strong>.
+
+            <br><br>&emsp;Un vecin al unui vârf <strong class="highlight">x</strong> este orice vârf <strong class="highlight">y</strong> cu proprietatea că există muchia <strong class="highlight">[x, y]</strong>.
+
+            <br><br>&emsp;Două vârfuri între care există muchie se numesc <strong class="highlight">adiacente</strong>.
+
+            <br><br>&emsp;Două muchii sunt <strong class="highlight">incidente</strong> dacă au o o extremitate comună. Un vârf este incident cu o muchie dacă vârful este extremitate a acelei muchii.
+
+            <br><br>&emsp;Mulțimea muchiilor are proprietatea de simetrie: dacă <strong class="highlight">[x, y]</strong> este muchie, atunci și <strong class="highlight">[y, x]</strong> este muchie.
+
+            <br><br>&emsp;Conform definiției:
+
+            <br><br>&emsp;- într-un graf neorientat nu există muchie de la un vârf la el însuși;
+            <br><br>&emsp;- intre două vârfuri distincte există cel mult o muchie.
+            <br><br>&emsp;<strong>Exemplu</strong>: <strong class="highlight">Fie G = (X, U)</strong>, unde:
+
+            
+            <br><br>&emsp;<strong class="highlight">- X = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11}</strong>
+            <br><br>&emsp;<strong class="highlight">- U = {[1,4], [1,5], [2,3], [2,8], [3,11], [4,5], [4,9], [7,10], [8,11]}</strong>
+            
+            <br><br><br><img src="img/graf1.png" style="position: relative; left: 25%;">
+
+            <br><br><br><br>&emsp;<strong>Definiție:</strong> Într-un graf neorientat se numește <strong class="highlight">grad</strong> al unui vârf numărul de vârful adiacente cu acesta (sau numărul de muchii incidente cu acesta). <strong class="highlight"></strong>Gradul unui vărf <strong class="highlight">x</strong> se notează <strong class="highlight">d(x)</strong> (degree).
+
+            <br><br><br><br>&emsp;<strong>Observații:</strong>
+
+            <br><br>&emsp;- un vârf cu gradul <strong class="highlight">0</strong> se numește <strong class="highlight">izolat</strong>. În graful de mai sus, vârful <strong class="highlight">6</strong> este vârf <strong class="highlight">izolat</strong>.
+            <br><br>&emsp;- un vârf cu gradul <strong class="highlight">1</strong> se numește <strong class="highlight">terminal</strong>. În graful de mai sus, vârful <strong class="highlight">9</strong> este vârf <strong class="highlight">terminal</strong>.
+            <br><br>&emsp;- gradul maxim al unui vârf într-un graf cu <strong class="highlight">n</strong> vârfuri este <strong class="highlight">n-1</strong>.
+            <br><br>&emsp;- <strong>Teoremă:</strong> Într-un graf neorientat, suma gradelor tuturor vârfurilor este dublul numărului de muchii.
+
+            <br><br><br><br>&emsp;<strong>Consecințe:</strong>
+
+            <br><br>&emsp;- suma gradelor tuturor vârfurilor este număr par.
+            <br><br>&emsp;- într-un graf neorientat, numărul de vârfuri de grad impar este întotdeauna par.
+
+            <br><br><br><br>&emsp;<strong>Definiție:</strong> Fie <strong class="highlight">G=(X, U)</strong> un graf neorientat. Graful <strong class="highlight">G</strong> se numește <strong class="highlight">graf complet</strong> dacă oricare două vârfuri
+            distincte ale sale sunt adiacente. Un graf complet cu <strong class="highlight">n</strong> vârfuri se notează <strong class="highlight">K<sub>n</sub></strong>.
+
+            <br><br>&emsp;<strong>Exemplu:</strong> Graful următor este graful <strong class="highlight">K<sub>4</sub></strong>.
+
+            <br><br><br><img src="img/graf2.png" style="position: relative; left: 35%;">
+
+            <br><br><br>&emsp;<strong>Observație:</strong>Într-un graf complet cu <strong class="highlight">n</strong> vârfuri sunt <strong class="highlight">combinări de n luate câte 2</strong>, adică <strong class="highlight">n*(n-1)/2</strong> muchii și fiecare vârf are gradul <strong class="highlight">n-1</strong>.
+
+            <br><br>&emsp;<strong>Observație:</strong> Sunt <strong class="highlight">2<sup>n∗(n−1)/2</sup></strong> grafuri neorientate distincte cu <strong class="highlight">n</strong> vârfuri. 
+        
+            <br><br><br><br>&emsp;<strong>Definiţie:</strong> Un graf <strong class="highlight">G=(X, U)</strong> se numește graf <strong class="highlight">bipartit</strong> dacă există două mulţimi nevide <strong class="highlight">A</strong> și <strong class="highlight">B</strong> astfel încât <strong class="highlight">X = A ∪ B, A ∩ B = ∅</strong> şi orice muchie <strong class="highlight">u</strong> a lui <strong class="highlight">G</strong> are o extremitate în <strong class="highlight">A</strong> iar cealaltă în <strong class="highlight">B</strong>. Mulţimile <strong class="highlight">A</strong> şi <strong class="highlight">B</strong> formează o partiţie a lui <strong class="highlight">X</strong>.
+
+            <br><br>&emsp;<strong>Exemplu:</strong> Graful următor este bipartit. <strong class="highlight">A = {1, 2, 5, 7}</strong> și <strong class="highlight">B = {3, 4, 6}</strong>.
+
+            <br><br><img src="img/graf3.png" style="position: relative; left: 25%;">
+
+            <br><br><br>&emsp;<strong>Definiție:</strong> Se numește lanț o succesiune de vârfuri <strong class="highlight">L = [x1, x2, ⋯, xk]</strong> cu proprietatea că oricare două vârfuri consecutive sunt adiacente.
+
+            <br><br>&emsp;Vârfurile <strong class="highlight">x<sub>1</sub></strong> şi <strong class="highlight">x<sub>k</sub> </strong> se numesc <strong class="highlight">extremitățile</strong> lanțului. Numărul <strong class="highlight">k-1</strong> se numește <strong class="highlight">lungimea</strong> lanțului și este numărul de muchii din care este format.
+            
+            <br><br>&emsp;Lanțul care conține numai vârfuri distincte, două câte două, este lanț <strong class="highlight">elementar</strong>.
+            
+            <br><br>&emsp;<strong>Definiție:</strong> Se numește <strong class="highlight">ciclu</strong> un lanț simplu în care primul vârf este identic cu ultimul. Dacă toate vârfurile sunt distincte, mai puțin primul și ultimul, se numește ciclu <strong class="highlight">elementar</strong>.
+            
+            <br><br>&emsp;Lungimea unui ciclu este egală cu numărul de muchii din ciclu. Lungimea minimă a unui ciclu este <strong class="highlight">3</strong>.
+            
+            <br><br>&emsp;Un ciclu se numește <strong class="highlight">par</strong> dacă lungimea sa este pară, respectiv <strong class="highlight">impar</strong> în caz contrar.
+            
+            <br><br>&emsp;Un graf neorientat care nu conține niciun ciclu se numește <strong class="highlight">aciclic</strong>.
+            
+            <br><br>&emsp;<strong>Exemple:</strong> În graful de mai jos:
+
+            <br><br><img src="img/graf4.png" style="position: relative; left: 25%;">
+
+            <br><br>&emsp;- <strong class="highlight">[2,4,1,3,5,7]</strong> este un lanț <strong class="highlight">elementar</strong>;
+            <br><br>&emsp;- <strong class="highlight">[1,5,3,2,4,1]</strong> este un ciclu <strong class="highlight">elementar</strong>;
+            <br><br>&emsp;- <strong class="highlight">[1,3,5,7,6,5,1]</strong> este un ciclu <strong class="highlight">neelementar</strong>.
+
+            <br><br><br><br>&emsp;<strong>Definiție:</strong> Un graf neorientat se numește graf conex dacă pentru oricare două vârfuri x și y diferite ale sale, există cel puțin un lanț care le leagă, adică x este extremitatea inițială și y este extremitatea finală.
+
+            <br><br>&emsp;Un graf cu un singur nod este, prin definiție, conex.
+            
+            <br><br>&emsp;<strong>Definiție:</strong> Se numește <strong class="highlight">componentă conexă</strong> a unui graf <strong class="highlight">G = (X, U)</strong> un subgraf <strong class="highlight">H = (Y, V)</strong>, conex, al lui <strong class="highlight">G</strong>
+            care are proprietatea că nu există nici un lanț în <strong class="highlight">G</strong> care să lege un vârf din <strong class="highlight">Y</strong> cu un vârf din <strong class="highlight">X \ Y</strong>.
+            
+            <br><br>&emsp;Subgraful <strong class="highlight">H</strong> este conex și maximal cu această proprietate (dacă s-ar mai adăuga un vârf nu ar mai fi conex.)
+            
+            <br><br>&emsp;Un graf este <strong class="highlight">conex</strong> dacă admite o singură componentă conexă.
+            
+            <br><br>&emsp;<strong>Exemple:</strong> Graful următor este <strong class="highlight">conex</strong>:
+
+            <br><br><img src="img/graf3.png" style="position: relative; left: 25%;">
+
+            <br><br><br>&emsp;Graful următor nu este conex și are <strong class="highlight">4</strong> componente conexe:
+
+            <br><br><img src="img/graf1.png" style="position: relative; left: 25%;">
+
+            
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>

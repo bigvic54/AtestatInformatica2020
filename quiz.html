@@ -1,0 +1,262 @@
+<!DOCTYPE html> 
+<html>
+
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<head>
+
+    <script src="js/jquery-1.4.2.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style_quiz.css">
+    
+    <title>Întrebări Recapitulative</title>
+
+
+    <script> 
+
+        $(document).ready(function() 
+        { 
+            var arr = ['b', 'b', 'd', 'd', 'd', 'c', 'a', 'c', 'a', 'd'], trimis = 0, toate = 0;
+            const nrq = 10;
+
+            $("button").click(function() 
+            { 
+                if(!trimis)
+                {
+                
+                var x = $("form").serializeArray(), raspTrimise = 0;
+                $.each(x,function(i, field)
+                {
+                    raspTrimise++;
+                });
+
+                if(raspTrimise == nrq)
+                    toate = 1;
+
+                if(toate)
+                {
+                    $("#output").append('<br><br><p class="rasp">Răspunsul tău este: </p><br><br>'); 
+
+                $.each(x, function(i, field) 
+                { 
+                    $("#output").append("<strong>" + (i + 1) + "</strong>. " + field.value + ")<br>");
+                });
+
+                var corr = 0;
+
+                $("#output").append('<br><br><p class="rasp">Răspunsul corect este: <br><br>'); 
+        
+                $.each(arr, function(index, value)
+                {
+                    $("#output").append("<strong>" + (index + 1) + "</strong>. " + value + ")<br>");
+
+                    if(value == x[index].value)
+                        corr++;
+
+                });
+
+                $("#output").append("<br><br>");
+
+                if(corr == nrq)
+                    $("#output").append("Felicitări! ");
+                
+                else if(corr == 0)
+                    $("#output").append("Citește încă odată teoria. ")
+
+                $("#output").append("Ai răspuns corect la " + corr + " întrebări. Punctajul tău este de " + (corr / nrq * 100) + " %.");
+
+                }
+
+                else //if(!toate)
+                {
+                    if(!alert('Completați toate cele ' + nrq + ' întrebări!'))
+                        window.location.reload(); //reload la pagina
+                }
+
+                }
+
+                trimis = 1;
+            }); 
+        }); 
+    
+    </script> 
+
+</head>
+
+<body>
+
+<div class="tot">
+
+<form action="#">
+
+    <p class="intrebare">1. Se consideră un graf neorientat cu nodurile numerotate de la 1 la 8 și muchiile: <strong class="highlight">[1, 3], [1, 7], [2, 6], [3, 7], [5, 2], [5, 6], [8, 4]</strong>. Care este numărul minim de muchii ce pot fi adăugate astfel încât graful să devină conex? </p>
+
+    <label for="a">a) 0</label>&emsp;
+    <input type="radio" id="q1a" name="q1" value="a">
+
+    &emsp;&emsp;<label for="b">b) 2</label>&emsp;
+    <input type="radio" id="q1b" name="q1" value="b">
+    
+    &emsp;&emsp;<label for="c">c) 3</label>&emsp;
+    <input type="radio" id="q1c" name="q1" value="c">
+    
+    &emsp;&emsp;<label for="d">d) 4</label>&emsp;
+    <input type="radio" id="q1d" name="q1" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">2. Un arbore cu rădăcină are nodurile numerotate de la 1 la 9 și este memorat cu ajutorul vectorului de tați <strong class="highlight">(2, 5, 5, 3, 0, 2, 3, 7, 6)</strong>, atunci nodurile frunză ale arborelui sunt: </p>
+
+    <label for="a">a) 6, 7</label>&emsp;
+    <input type="radio" id="q2a" name="q2" value="a">
+
+    &emsp;&emsp;<label for="b">b) 1, 4, 8, 9</label>&emsp;
+    <input type="radio" id="q2b" name="q2" value="b">
+    
+    &emsp;&emsp;<label for="c">c) 5</label>&emsp;
+    <input type="radio" id="q2c" name="q2" value="c">
+    
+    &emsp;&emsp;<label for="d">d) 2, 3</label>&emsp;
+    <input type="radio" id="q2d" name="q2" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">3. Un graf orientat cu nodurile numerotate de la 1 la 5 și arcele: <strong class="highlight">(1, 5), (2, 4), (3, 5), (4, 1), (4, 2), (5, 2), (5, 3), (5, 4)</strong>. Numărul nodurilor care au gradul interior egal cu gradul exterior este: </p>
+
+    <label for="a">a) 2</label>&emsp;
+    <input type="radio" id="q3a" name="q3" value="a">
+
+    &emsp;&emsp;<label for="b">b) 4</label>&emsp;
+    <input type="radio" id="q3b" name="q3" value="b">
+    
+    &emsp;&emsp;<label for="c">c) 1</label>&emsp;
+    <input type="radio" id="q3c" name="q3" value="c">
+    
+    &emsp;&emsp;<label for="d">d) 3</label>&emsp;
+    <input type="radio" id="q3d" name="q3" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">4. Un arbore cu rădăcină având <strong class="highlight">9</strong> noduri, numerotate de la 1 la 9, este memorat cu ajutorul vectorului de tați <strong class="highlight">t = (2, 5, 5, 3, 0, 2, 4, 6, 6)</strong>. Ascendenții nodului 6 sunt: </p>
+
+    <label for="a">a) nodurile 1 și 4</label>&emsp;
+    <input type="radio" id="q4a" name="q4" value="a">
+
+    &emsp;&emsp;<label for="b">b) doar nodul 2</label>&emsp;
+    <input type="radio" id="q4b" name="q4" value="b">
+    
+    &emsp;&emsp;<label for="c">c) nodurile 8 și 9</label>&emsp;
+    <input type="radio" id="q4c" name="q4" value="c">
+    
+    &emsp;&emsp;<label for="d">d) nodurile 2 și 5</label>&emsp;
+    <input type="radio" id="q4d" name="q4" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">5. Se consideră vectorul de tați al unui arbore oarecare <strong class="highlight">t = (0, 3, 1, 3, 1, 5)</strong>, în care nodurile sunt numerotate de la 1 la 6. Alegeți afirmația corectă: </p>
+
+    <label for="a">a) nodurile 2, 4 și 6 sunt frați</label>&emsp;
+    <input type="radio" id="q5a" name="q5" value="a">
+
+    &emsp;&emsp;<label for="b">b) nodul 5 are gradul 1</label>&emsp;
+    <input type="radio" id="q5b" name="q5" value="b">
+    
+    &emsp;&emsp;<label for="c">c) nodul 3 este tatăl nodului 1</label>&emsp;
+    <input type="radio" id="q5c" name="q5" value="c">
+    
+    &emsp;&emsp;<label for="d">d) nodurile 2, 4 și 6 sunt frunze</label>&emsp;
+    <input type="radio" id="q5d" name="q5" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">6. Se consideră arborele cu <strong class="highlight">8</strong> noduri, numerotate de la 1 la 8, cu rădăcina <strong class="highlight">5</strong> şi muchiile: <strong class="highlight">[1,5], [2,7], [3,7], [3,8], [4,5], [5,7], [6,7]</strong>. Câți descendenţi direcţi („fii”) are nodul 7? </p>
+
+    <label for="a">a) 2</label>&emsp;
+    <input type="radio" id="q6a" name="q6" value="a">
+
+    &emsp;&emsp;<label for="b">b) 3</label>&emsp;
+    <input type="radio" id="q6b" name="q6" value="b">
+    
+    &emsp;&emsp;<label for="c">c) 4</label>&emsp;
+    <input type="radio" id="q6c" name="q6" value="c">
+    
+    &emsp;&emsp;<label for="d">d) 1</label>&emsp;
+    <input type="radio" id="q6d" name="q6" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">7. Care este numărul de muchii ale unui graf neorientat complet cu <strong class="highlight">7</strong> noduri? </p>
+
+    <label for="a">a) 21</label>&emsp;
+    <input type="radio" id="q7a" name="q7" value="a">
+
+    &emsp;&emsp;<label for="b">b) 14</label>&emsp;
+    <input type="radio" id="q7b" name="q7" value="b">
+    
+    &emsp;&emsp;<label for="c">c) 7</label>&emsp;
+    <input type="radio" id="q7c" name="q7" value="c">
+    
+    &emsp;&emsp;<label for="d">d) 28</label>&emsp;
+    <input type="radio" id="q7d" name="q7" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">8. Se consideră un graf orientat, cu <strong class="highlight">6</strong> noduri, numerotate de la 1 la 6 și arcele: <strong class="highlight">(1, 6), (2, 1), (2, 4), (3, 2), (4, 2), (5, 4), (6, 1), (6, 4)</strong>. Câte componente tare conexe are acest graf? </p>
+
+    <label for="a">a) 0</label>&emsp;
+    <input type="radio" id="q8a" name="q8" value="a">
+
+    &emsp;&emsp;<label for="b">b) 2</label>&emsp;
+    <input type="radio" id="q8b" name="q8" value="b">
+    
+    &emsp;&emsp;<label for="c">c) 3</label>&emsp;
+    <input type="radio" id="q8c" name="q8" value="c">
+    
+    &emsp;&emsp;<label for="d">d) 1</label>&emsp;
+    <input type="radio" id="q8d" name="q8" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">9. Se consideră arborele cu <strong class="highlight">7</strong> noduri, numerotate de la 1 la 7, reprezentat prin vectorul de taţi <strong class="highlight">(5, 4, 5, 3, 0, 3, 1)</strong>. Mulţimea tuturor frunzelor arborelui este: </p>
+
+    <label for="a">a) {2, 6, 7}</label>&emsp;
+    <input type="radio" id="q9a" name="q9" value="a">
+
+    &emsp;&emsp;<label for="b">b) {2}</label>&emsp;
+    <input type="radio" id="q9b" name="q9" value="b">
+    
+    &emsp;&emsp;<label for="c">c) {1, 4}</label>&emsp;
+    <input type="radio" id="q9c" name="q9" value="c">
+    
+    &emsp;&emsp;<label for="d">d) {3, 5}</label>&emsp;
+    <input type="radio" id="q9d" name="q9" value="d">
+
+    <br><br><br>
+
+    <p class="intrebare">10. Un graf neorientat cu <strong class="highlight">8</strong> noduri, numerotate de la 1 la 8, are muchiile: <strong class="highlight">[1, 2], [1, 6], [4, 6], [3, 6], [6, 5], [5, 3], [3, 4], [7, 8], [8, 2]</strong>. Trei noduri care nu aparţin niciunui ciclu în acest graf pot fi: </p>
+
+    <label for="a">a) 1, 3, 4</label>&emsp;
+    <input type="radio" id="q10a" name="q10" value="a">
+
+    &emsp;&emsp;<label for="b">b) 5, 6, 8</label>&emsp;
+    <input type="radio" id="q10b" name="q10" value="b">
+    
+    &emsp;&emsp;<label for="c">c) 3, 5, 6</label>&emsp;
+    <input type="radio" id="q10c" name="q10" value="c">
+    
+    &emsp;&emsp;<label for="d">d) 2, 7, 8</label>&emsp;
+    <input type="radio" id="q10d" name="q10" value="d">
+
+</form>
+
+<br><br>
+<button class="trimite">Trimite răspunsul</button>
+
+
+<div id="output"></div>
+
+</div>
+
+</body>
+
+</html>
